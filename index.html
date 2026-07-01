@@ -14,6 +14,18 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script defer src="https://storage.ko-fi.com/cdn/scripts/overlay-widget.js"></script>
+    <script>
+      window.addEventListener("DOMContentLoaded", function () {
+        if (!window.kofiWidgetOverlay) return;
+
+        window.kofiWidgetOverlay.draw("nickolasdeluca", {
+          type: "floating-chat",
+          "floating-chat.donateButton.text": "Support Us",
+          "floating-chat.donateButton.background-color": "#fcbf47",
+          "floating-chat.donateButton.text-color": "#323842"
+        });
+      });
+    </script>
   </body>
 </html>
-
